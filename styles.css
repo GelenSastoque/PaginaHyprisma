@@ -78,6 +78,7 @@ body {
 p {
     font-family: var(--textFont);
     color: var(--white);
+    font-weight: normal;
 }
 
 /** Botones Generales **/
@@ -150,9 +151,13 @@ p {
 }
 
 .header {
-    z-index: 2;
-    position: relative;
+    z-index: 3;
+    position: absolute;
     margin-top: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
 }
 
 .logo_container {
@@ -237,6 +242,8 @@ p {
     height: calc(100vh - 11.5rem);
     background-color: var(--black);
     position: relative;
+    margin-top: 11.5rem;
+    margin-bottom: 11.5rem;
 }
 
 .titulo_container {
@@ -272,6 +279,72 @@ p {
     width: 321px;
     height: 48px;
 }
+
+
+/** Seccion Sponsor (grid container)**/
+
+.grid_container{
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "que porque pdf" 
+                        "benef benef pdf";
+    gap: 2rem;
+    height: fit-content;
+    padding-top: 11.5rem;
+    padding-bottom: 5rem;
+}
+
+.sec_queEsSponsor {
+    grid-area: que;
+    padding: 0 2rem;
+}
+
+.sec_benefSponsor {
+    grid-area: benef;
+    padding: 0 2rem;
+}
+
+.sec_porqueSponsor {
+    grid-area: porque;
+    padding: 0 2rem;
+}
+
+.pdf_container {
+    grid-area: pdf;
+}
+
+.sec_titulo{
+    font-family: var(--subtituloFont);
+    font-weight: unset;
+    font-size: 3.2rem;
+    color: var(--white);
+}
+
+.sec_titulo span{
+    font-weight: bold;
+    color: var(--purple);
+}
+
+
+
+.sec_texto{
+    font-size: 1.8rem;
+}
+
+.sec_lista_texto{
+    color: var(--white);
+    padding-left: 2rem;
+}
+
+.sec_botones{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/** Footer **/
 
 .footer {
     z-index: 2;

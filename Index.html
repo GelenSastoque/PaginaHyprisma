@@ -35,12 +35,45 @@
             </div>
         </div>
         <div class="button_container">
-            <button class="button_green buttonSponsor">¡Conviértete en Hyprisma Sponsor!</button>
+            <button class="button_green buttonSponsor" id="buttonSponsor" onclick="scrollToSection('grid_container')">¡Conviértete en Hyprisma Sponsor!</button>
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="19" viewBox="0 0 34 19" fill="none">
                 <path d="M2 2L16.6875 16L32 2" stroke="#F4F4F4" stroke-width="4" stroke-linecap="round"/>
             </svg>
         </div>
     </main>
+    <div class="grid_container" id="grid_container">
+        <div class="sec_queEsSponsor">
+            <h2 class="sec_titulo">¿Qué es un <span>Hyprisma Sponsor</span>?</h2>
+            <p class="sec_texto">
+                Es una persona que elige ser una parte fundamental de nuestra visión y misión, que confía en nuestra propuesta y la materializa.
+            </p>
+            <p class="sec_texto">
+                Un sponsor no solo invierte en la empresa, sino que se convierte en un socio vital en la búsqueda de redefinir el marketing digital y crear experiencias transmedia únicas.
+            </p>
+        </div>
+        <div class="sec_benefSponsor">
+            <h2 class="sec_titulo">Beneficios de ser <span>Hyprisma Sponsor</span></h2>
+            <ul class="sec_lista_texto">
+                <li><p class="sec_texto">¡Te comprometes con la innovación!. Serás parte de la revolución del marketing y experiencias transmedia.</p></li>
+                <li><p class="sec_texto">Tendrás acceso a informes y análisis internos.</p></li>
+                <li><p class="sec_texto">Podrás tener un voto en nuestras decisiones estratégicas.</p></li>
+                <li><p class="sec_texto">Participarás en eventos exclusivos.</p></li>
+            </ul>
+        </div>
+        <div class="sec_porqueSponsor">
+            <h2 class="sec_titulo">¿Por qué convertirse en <span>Hyprisma Sponsor</span>?</h2>
+            <p class="sec_texto">
+                Hyprisma tiene una proyección en el mercado bastante viable. ¡Revísalo tu mismo!
+            </p>
+            <div class="sec_botones">
+                <button class="button_factibilidad" onclick="cambiarPDF('Pdfs/Prueba_Fact.pdf')">Estudio de factibilidad</button>
+                <button class="button_mercado">Estudio de mercado</button>
+                <button class="button_financiero">Estados financieros</button>
+            </div>
+        </div>
+        <!-- <div class="pdf_container" id="pdf_container"></div> -->
+        <div class="pdf_container"><iframe src="Pdfs/Prueba_Fact.pdf" width="100%" height="100%"></iframe></div>
+    </div>
     <footer class="footer">
         <div class="info">
             <div class="contacto">               
@@ -65,6 +98,14 @@
         </div>
     </footer>
     <script src="Scripts/AnimTitulo.js"></script>
+    <script src="Scripts/scroll.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="pdf_view.js"></script>
+    <script>
+        window.onload = function() {
+          cambiarPDF('Pdfs/Prueba_Fact.pdf'); // Mostrar el primer PDF por defecto al cargar la página
+        };
+    </script>
 </body>
 
 </html>
