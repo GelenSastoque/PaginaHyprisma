@@ -60,8 +60,10 @@
     }
 }
 
+/** Seccion Significado **/
+
 .sec_significado{
-    height: 30.6rem;
+    min-height: 30.6rem;
     background-image: url('../Recursos/Imagenes/SN_image1.png');
     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
@@ -71,8 +73,14 @@
 
 .significado__content{
     max-width: 54rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin-left: 9.2rem;
+}
+
+@media (max-width: 670px) {
+    .significado__content{
+        margin-left: 0;
+    }
 }
 
 .significado__content--titulo{
@@ -90,6 +98,255 @@
     text-align: justify;
 }
 
+@media (max-width: 490px) {
+    .significado__content--text{
+        font-size: 1.5rem;
+    }
+}
+
 .significado__content--text span{
     font-weight: bold;
+}
+
+
+/** Seccion Slogan **/
+
+.sec_slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.slogan--titulo{
+    color: var(--purple);
+    font-family: var(--subtituloFont);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.slogan--text{
+    color: var(--white);
+    font-family: var(--textFont);
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+@media (max-width: 490px){
+    .slogan--titulo {
+        font-size: 2.3rem;
+    }
+
+    .slogan--text {
+        font-size: 1.5rem;
+    }
+}
+
+
+/** Separador **/
+
+.separador {
+    width: 100%;
+    height: 1.8rem;
+    background-color: var(--purple);
+}
+
+
+/** Mision **/
+
+.sec_mision{
+    position: relative;
+}
+
+.mision--img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../Recursos/Imagenes/Pasos.png');
+    background-size: contain; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: right; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+}
+
+.mision__content{
+    max-width: 57rem;
+    margin-left: 6.5rem;
+    margin-top: 9rem;
+
+}
+
+.SN_titulo{
+    color: var(--white);
+    font-family: var(--subtituloFont);
+    font-size: 2rem;
+    width: fit-content;
+    margin: 0;
+    border-bottom: 4px solid var(--purple);
+    padding: 0 1rem;
+}
+
+.SN_text{
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+}
+
+.SN_text span{
+    font-weight: bold;
+}
+
+@media (max-width: 490px) {
+    .SN_text{
+        font-size: 1.5rem;
+    }
+}
+
+
+/** Vision **/
+
+.sec_vision{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.vision--img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../Recursos/Imagenes/Conexiones.png');
+    background-size: contain; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: left; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1030px) {
+    .vision--img, .mision--img{
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 820px) {
+    .vision--img, .mision--img{
+        opacity: 0.15;
+    }
+}
+
+.vision__content{
+    max-width: 57rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    right: 0;
+    margin-right: 6.5rem;
+
+}
+
+@media (max-width: 675px) {
+    .vision__content, .mision__content{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+
+/** Objetivos **/
+
+.sec_objetivos{
+    padding: 0 9rem;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+.objetivos__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15%;
+    row-gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .objetivos__container{
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+}
+
+.objetivos__item{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.objetivos__item--number{
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--purple);
+    padding: 0.5rem 1.1rem;
+    border-radius: 50%;
+}
+
+.objetivos__item--text{
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+}
+
+@media (max-width: 490px) {
+    .sec_objetivos{
+        padding: 0 2rem;
+    }
+
+    .objetivos__item--number{
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .objetivos__item--text{
+        font-size: 1.5rem;
+    }
+}
+
+
+/** Por que escoger **/
+
+.sec_escoger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7rem;
+    margin: 5.2rem 0;
+}
+
+.escoger_text{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 19px;
+    border: 5px solid var(--white);
+    padding: 1rem 7rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 850px) {
+    .sec_escoger{
+        padding: 0 2rem;
+    }
+    .escoger_text{
+        padding: 1rem 2rem;
+    }
 }

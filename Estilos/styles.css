@@ -258,7 +258,10 @@ p {
 
 @media (max-width: 650px) {
     .navbar__list{
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -274,9 +277,16 @@ p {
     padding: 0.5rem 1.5rem;
 }
 
+@media (max-width: 650px){
+    .navbar__list--item {
+        width: 100%;
+    }
+}
+
 .navbar__list--item--active {
     background-color: var(--green);
     color: var(--black);
+    font-weight: bold;
 }
 
 .navbar__list--item:active {
