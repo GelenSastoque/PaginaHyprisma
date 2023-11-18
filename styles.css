@@ -1,0 +1,302 @@
+/* Estilos CSS */
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'The-Bold-Font';
+    src: url('/Recursos/Fuentes/The Bold Font/The_Bold_Font.ttf');
+}
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnerbold.ttf');
+}
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnernormal.ttf');
+}
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-REGULAR.OTF');
+}
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-BOLD.OTF');
+}
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal; 
+    font-style: italic; 
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-SEMIBOLDIT.OTF');
+}
+
+:root {
+    --green: #54D6C0;
+    --greenHover: #287d6f;
+    --purple: #5B65B3;
+    --red: #C13D3D;
+    --yellow: #F4C737;
+    --white: #F4F4F4;
+    --black: #1B1B1B;
+
+    /* Font */
+    --tituloFont: 'The-Bold-Font', sans-serif;
+    --subtituloFont: 'Time-Burner', sans-serif;
+    --textFont: 'Myriad-Pro', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+html, body {
+    /* height: 100%; */
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--offWhite);
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    position: relative;
+}
+
+p{
+    font-family: var(--textFont);
+    color: var(--white);
+}
+
+/** Botones Generales **/
+.button_green{
+    border-radius: 29px;
+    background-color: var(--green);
+    color: var(--black);
+    border: none;
+    font-family: var(--subtituloFont);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button_green:hover{
+    background-color: var(--greenHover);
+    cursor: pointer;
+}
+
+.button_green:active{
+    color: var(--white);
+}
+
+
+
+
+.videocontainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño del video al contenedor */
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.header{
+    z-index: 2;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.logo_container{
+    position: absolute;
+    width: 11.9rem;
+    height: 11.9rem;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 0rem 2rem;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 910px){
+    .logo_container{
+        visibility: hidden;
+    }
+}
+
+/** Navbar **/
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5rem;
+    /* border: 3px solid var(--green); */
+}
+
+.navbar__list {
+    /* float: right; */
+    margin: 0;
+    display: flex;
+    list-style: none;
+    border-radius: 29px;
+    border: 3px solid var(--green);
+    width: fit-content;
+    padding: 0.3rem 1rem;
+}
+
+.navbar__list--item {
+    line-height: 4rem;
+    width: auto;
+    margin: 0 2rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 29px;
+    font-family: var(--subtituloFont);
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar__list--item--active {
+    background-color: var(--green);
+    color: var(--black);
+}
+
+.navbar__list--item:active {
+    background-color: var(--green);
+    color: var(--black);
+}
+
+.navbar__list--item:hover {
+    background-color: var(--greenHover);
+    cursor: pointer;
+}
+
+.mainContainer{
+    
+    display: flex;
+    flex-direction: column;
+    /* height: calc(100vh - 102px); */
+    height: 100vh;
+    background-color: var(--black);
+    position: relative;
+}
+
+.titulo_container{
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.titulo{
+    font-family: var(--tituloFont);
+    font-size: 9.6rem;
+    color: var(--white);
+}
+
+.button_container{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.buttonSponsor{
+    width: 321px;
+    height: 48px;
+}
+
+.footer{
+    z-index: 2;
+    height: 10rem;
+    background: var(--red);
+    box-shadow: 0px -8px 30.9px 0px rgba(74, 74, 74, 0.25);
+    padding: 1.7rem 0rem 0rem 0rem;
+}
+
+.info{
+    justify-content: center;
+    display:flex;
+    align-items: flex-start;
+    gap:15rem;
+}
+.contacto{
+    display:flex;
+    align-items: center;
+
+}
+.correo{
+    display:flex;
+    align-items: center;
+}
+.direccion{
+    display:flex;
+    
+    align-items: center;
+}
+.TextFooter{
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    
+}
+.dirAlign{
+    display: flex;
+    flex-direction: column;
+}
+.dirStyle{
+    border-bottom: 1px solid #F4F4F4;
+    padding-bottom: 0.2rem; /* Ajusta el espacio entre la línea y el texto */
+    margin-bottom: 0.2rem; /* Ajusta el espacio entre las líneas */
+}
+.dirPisStyle{
+    padding-left: 1.2rem;
+}
+.sloganstyle{
+    font-size: 1.8rem;
+    margin-left: 3rem;
+    font-style: italic;
+    padding-bottom: 0.2rem;
+}
+
+@media (max-width: 809px) {
+    .info{
+        gap:1.5rem;
+    }
+    .sloganstyle{
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 539px) {
+    .info{
+        gap:0.1rem;
+    }
+}
