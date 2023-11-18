@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/99a912298c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="miHeader">
         <div class="logo_container">
             <img src="Recursos/Imagenes/LogoHyprisma.png" alt="Logo Hyprisma" class="logo">
         </div>
@@ -66,13 +66,17 @@
                 Hyprisma tiene una proyección en el mercado bastante viable. ¡Revísalo tu mismo!
             </p>
             <div class="sec_botones">
-                <button class="button_factibilidad" onclick="cambiarPDF('Pdfs/Prueba_Fact.pdf')">Estudio de factibilidad</button>
-                <button class="button_mercado">Estudio de mercado</button>
-                <button class="button_financiero">Estados financieros</button>
+                <button class="button_factibilidad button_purple" id="botonpdf1">Estudio de factibilidad</button>
+                <button class="button_mercado button_purple" id="botonpdf2">Estudio de mercado</button>
+                <button class="button_financiero button_purple" id="botonpdf3">Estados financieros</button>
             </div>
         </div>
         <!-- <div class="pdf_container" id="pdf_container"></div> -->
-        <div class="pdf_container"><iframe src="Pdfs/Prueba_Fact.pdf" width="100%" height="100%"></iframe></div>
+        <div class="pdf_container">
+            <iframe src="Pdfs/Prueba_Fact.pdf" width="100%" height="100%" id="pdf1" style="display: block;"></iframe>
+            <iframe src="Pdfs/Prueba_Fact2.pdf" width="100%" height="100%" id="pdf2" style="display: none;"></iframe>
+            <iframe src="Pdfs/Prueba_Fact3.pdf" width="100%" height="100%" id="pdf3" style="display: none;"></iframe>
+        </div>
     </div>
     <footer class="footer">
         <div class="info">
@@ -99,13 +103,8 @@
     </footer>
     <script src="Scripts/AnimTitulo.js"></script>
     <script src="Scripts/scroll.js"></script>
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-    <script src="pdf_view.js"></script>
-    <script>
-        window.onload = function() {
-          cambiarPDF('Pdfs/Prueba_Fact.pdf'); // Mostrar el primer PDF por defecto al cargar la página
-        };
-    </script>
+    <script src="Scripts/scroll_header.js"></script>
+    <script src="Scripts/pdf_view.js"></script>
 </body>
 
 </html>

@@ -41,6 +41,7 @@
     --green: #54D6C0;
     --greenHover: #287d6f;
     --purple: #5B65B3;
+    --purpleHover: #39417c;
     --red: #C13D3D;
     --yellow: #F4C737;
     --white: #F4F4F4;
@@ -112,22 +113,49 @@ p {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     
-  }
+}
   
-  .button_yellow:hover {
+.button_yellow:hover {
     border-radius: 29px;
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: var(--yellow);
     cursor: pointer;
-  }
-  
-  .ContainerPort {
+}
+
+.button_yellow:active {
+    color:var(--black);
+}
+
+.ContainerPort {
     border-bottom: 0.3rem solid var(--yellow);
     padding-bottom: 0.5rem;
     opacity: 0; /* Agrega esta línea para ocultar el botón inicialmente */
     transition: opacity 1s ease-in-out; /* Agrega esta línea para una transición suave de la opacidad */
-  }
+}
+
+.button_purple{
+    border-radius: 29px;
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    font-family: var(--subtituloFont);
+    font-weight: bold;
+    font-size: 1.8rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
+}
+
+.button_purple:hover{
+    background-color: var(--purpleHover);
+    cursor: pointer;
+}
+
+.button_purple:active{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
   
 /** Video fondo**/
 .videocontainer {
@@ -153,12 +181,27 @@ p {
 .header {
     z-index: 3;
     position: absolute;
-    margin-top: 1rem;
+    padding-top: 1rem;
     top: 0;
     left: 0;
     width: 100%;
     position: fixed;
+    transition: background-color 0.3s ease;
 }
+
+@media (max-width: 910px){
+    .header{
+        position: absolute;
+    }
+}
+
+.header-sin-fondo {
+    background-color: transparent; /* Fondo inicialmente transparente */
+  }
+  
+  .header-con-fondo {
+    background-color: var(--black); /* Color de fondo cuando aparece al hacer scroll */
+  }
 
 .logo_container {
     position: absolute;
@@ -196,6 +239,12 @@ p {
     /* border: 3px solid var(--green); */
 }
 
+@media (max-width: 650px){
+    .navbar{
+        height: auto;
+    }
+}
+
 .navbar__list {
     /* float: right; */
     margin: 0;
@@ -205,6 +254,12 @@ p {
     border: 3px solid var(--green);
     width: fit-content;
     padding: 0.3rem 1rem;
+}
+
+@media (max-width: 650px) {
+    .navbar__list{
+        flex-direction: column;
+    }
 }
 
 .navbar__list--item {
@@ -292,8 +347,27 @@ p {
                         "benef benef pdf";
     gap: 2rem;
     height: fit-content;
+    padding: 0 2rem;
     padding-top: 11.5rem;
     padding-bottom: 5rem;
+
+}
+
+@media (max-width: 950px) {
+    .grid_container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+        grid-template-areas: "que" 
+                            "benef"
+                            "porque"
+                            "pdf";
+    }
+}
+
+@media (max-width: 910px){
+    .grid_container{
+        padding-top: 3rem;
+    }
 }
 
 .sec_queEsSponsor {
@@ -327,8 +401,6 @@ p {
     color: var(--purple);
 }
 
-
-
 .sec_texto{
     font-size: 1.8rem;
 }
@@ -341,6 +413,14 @@ p {
 .sec_botones{
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    
+}
+
+@media (max-width: 950px){
+    .sec_botones{
+        align-items: center;
+    }
 }
 
 
@@ -359,6 +439,14 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 15rem;
+}
+
+@media (max-width: 520px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
 }
 
 .contacto {

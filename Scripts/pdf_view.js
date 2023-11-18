@@ -1,50 +1,27 @@
-// const pdfContainer = document.getElementById('pdf-container');
+document.getElementById('botonpdf1').addEventListener('click', function() {
+  mostrarElemento('pdf1');
+  ocultarElemento('pdf2');
+  ocultarElemento('pdf3');
+});
 
-// function cambiarPDF(pdfUrl) {
-//   pdfContainer.innerHTML = ''; // Limpiar el contenedor antes de cargar un nuevo PDF
+document.getElementById('botonpdf2').addEventListener('click', function() {
+  mostrarElemento('pdf2');
+  ocultarElemento('pdf1');
+  ocultarElemento('pdf3');
+});
 
-//   pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-//     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-//       pdf.getPage(pageNumber).then(page => {
-//         const canvas = document.createElement('canvas');
-//         pdfContainer.appendChild(canvas);
-//         const context = canvas.getContext('2d');
-//         const viewport = page.getViewport({ scale: 1.5 });
-//         canvas.height = viewport.height;
-//         canvas.width = viewport.width;
+document.getElementById('botonpdf3').addEventListener('click', function() {
+  mostrarElemento('pdf3');
+  ocultarElemento('pdf1');
+  ocultarElemento('pdf2');
+});
 
-//         const renderContext = {
-//           canvasContext: context,
-//           viewport: viewport
-//         };
-//         page.render(renderContext);
-//       });
-//     }
-//   });
-// }
-
-const pdfContainer = document.getElementById('pdf-container');
-
-function cambiarPDF(pdfUrl) {
-  pdfContainer.innerHTML = ''; // Limpiar el contenedor antes de cargar un nuevo PDF
-
-  pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-      pdf.getPage(pageNumber).then(page => {
-        const canvas = document.createElement('canvas');
-        pdfContainer.appendChild(canvas);
-        const context = canvas.getContext('2d');
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        const renderContext = {
-          canvasContext: context,
-          viewport: viewport
-        };
-        page.render(renderContext);
-      });
-    }
-  });
+function mostrarElemento(id) {
+  document.getElementById(id).style.display = 'block';
 }
+
+function ocultarElemento(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
 
