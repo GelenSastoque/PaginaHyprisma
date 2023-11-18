@@ -5,30 +5,35 @@
     font-family: 'The-Bold-Font';
     src: url('/Recursos/Fuentes/The Bold Font/The_Bold_Font.ttf');
 }
+
 @font-face {
     font-family: 'Time-Burner';
     font-weight: bold;
     src: url('/Recursos/Fuentes/Time Burner/timeburnerbold.ttf');
 }
+
 @font-face {
     font-family: 'Time-Burner';
     font-weight: normal;
     src: url('/Recursos/Fuentes/Time Burner/timeburnernormal.ttf');
 }
+
 @font-face {
     font-family: 'Myriad-Pro';
     font-weight: normal;
     src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-REGULAR.OTF');
 }
+
 @font-face {
     font-family: 'Myriad-Pro';
     font-weight: bold;
     src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-BOLD.OTF');
 }
+
 @font-face {
     font-family: 'Myriad-Pro';
-    font-weight: normal; 
-    font-style: italic; 
+    font-weight: normal;
+    font-style: italic;
     src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-SEMIBOLDIT.OTF');
 }
 
@@ -47,19 +52,20 @@
     --textFont: 'Myriad-Pro', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
     display: flex;
     justify-content: center;
     /* align-items: center; */
 }
 
-html, body {
+html,
+body {
     /* height: 100%; */
     margin: 0;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     background-color: var(--offWhite);
@@ -69,35 +75,61 @@ body{
     position: relative;
 }
 
-p{
+p {
     font-family: var(--textFont);
     color: var(--white);
 }
 
 /** Botones Generales **/
-.button_green{
+.button_green {
     border-radius: 29px;
     background-color: var(--green);
     color: var(--black);
     border: none;
     font-family: var(--subtituloFont);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
-.button_green:hover{
+
+.button_green:hover {
     background-color: var(--greenHover);
     cursor: pointer;
 }
 
-.button_green:active{
+.button_green:active {
     color: var(--white);
 }
 
-
-
-
-.videocontainer{
+.button_yellow {
+    font-family: var(--subtituloFont);
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--white);
+    padding-left: 1.5rem;
+    padding-right: 1.7rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    
+  }
+  
+  .button_yellow:hover {
+    border-radius: 29px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--yellow);
+    cursor: pointer;
+  }
+  
+  .ContainerPort {
+    border-bottom: 0.3rem solid var(--yellow);
+    padding-bottom: 0.5rem;
+    opacity: 0; /* Agrega esta línea para ocultar el botón inicialmente */
+    transition: opacity 1s ease-in-out; /* Agrega esta línea para una transición suave de la opacidad */
+  }
+  
+/** Video fondo**/
+.videocontainer {
     position: absolute;
     top: 0;
     left: 0;
@@ -111,18 +143,19 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta el tamaño del video al contenedor */
+    object-fit: cover;
+    /* Ajusta el tamaño del video al contenedor */
     z-index: 1;
     opacity: 0.1;
 }
 
-.header{
+.header {
     z-index: 2;
     position: relative;
     margin-top: 1rem;
 }
 
-.logo_container{
+.logo_container {
     position: absolute;
     width: 11.9rem;
     height: 11.9rem;
@@ -132,14 +165,14 @@ p{
     padding: 0rem 2rem;
 }
 
-.logo{
+.logo {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-@media (max-width: 910px){
-    .logo_container{
+@media (max-width: 910px) {
+    .logo_container {
         visibility: hidden;
     }
 }
@@ -196,32 +229,37 @@ p{
     cursor: pointer;
 }
 
-.mainContainer{
-    
+.mainContainer {
+
     display: flex;
     flex-direction: column;
     /* height: calc(100vh - 102px); */
-    height: 100vh;
+    height: calc(100vh - 11.5rem);
     background-color: var(--black);
     position: relative;
 }
 
-.titulo_container{
+.titulo_container {
     z-index: 2;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80%;
+    flex-direction: column;
+    gap: 3rem;
+    
 }
 
-.titulo{
+.titulo {
     font-family: var(--tituloFont);
     font-size: 9.6rem;
     color: var(--white);
+    margin: 0;
+    margin-top:5rem;
 }
 
-.button_container{
+.button_container {
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -230,12 +268,12 @@ p{
     gap: 2rem;
 }
 
-.buttonSponsor{
+.buttonSponsor {
     width: 321px;
     height: 48px;
 }
 
-.footer{
+.footer {
     z-index: 2;
     height: 10rem;
     background: var(--red);
@@ -243,60 +281,82 @@ p{
     padding: 1.7rem 0rem 0rem 0rem;
 }
 
-.info{
+.info {
     justify-content: center;
-    display:flex;
+    display: flex;
     align-items: flex-start;
-    gap:15rem;
+    gap: 15rem;
 }
-.contacto{
-    display:flex;
+
+.contacto {
+    display: flex;
     align-items: center;
 
 }
-.correo{
-    display:flex;
+
+.correo {
+    display: flex;
     align-items: center;
 }
-.direccion{
-    display:flex;
-    
+
+.direccion {
+    display: flex;
+
     align-items: center;
 }
-.TextFooter{
+
+.TextFooter {
     margin: 0 0.5rem;
     font-size: 1.8rem;
-    
+
 }
-.dirAlign{
+
+.dirAlign {
     display: flex;
     flex-direction: column;
 }
-.dirStyle{
+
+.dirStyle {
     border-bottom: 1px solid #F4F4F4;
-    padding-bottom: 0.2rem; /* Ajusta el espacio entre la línea y el texto */
-    margin-bottom: 0.2rem; /* Ajusta el espacio entre las líneas */
+    padding-bottom: 0.2rem;
+    /* Ajusta el espacio entre la línea y el texto */
+    margin-bottom: 0.2rem;
+    /* Ajusta el espacio entre las líneas */
 }
-.dirPisStyle{
+
+.dirPisStyle {
     padding-left: 1.2rem;
 }
-.sloganstyle{
+
+.sloganstyle {
     font-size: 1.8rem;
     margin-left: 3rem;
     font-style: italic;
     padding-bottom: 0.2rem;
 }
 
+.hidden {
+    display: none;
+}
+
+.titulo_container.animate {
+    transform: translateY(-5rem);
+    /* Puedes ajustar la cantidad de desplazamiento */
+    transition: transform 1s ease-in-out;
+}
+
 @media (max-width: 809px) {
-    .info{
-        gap:1.5rem;
+    .info {
+        gap: 1.5rem;
     }
-    .sloganstyle{
+
+    .sloganstyle {
         margin-left: 1rem;
     }
 }
+
 @media (max-width: 539px) {
-    .info{
-        gap:0.1rem;
+    .info {
+        gap: 0.1rem;
     }
 }
