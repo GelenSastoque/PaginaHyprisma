@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'The-Bold-Font';
+    src: url('/Recursos/Fuentes/The Bold Font/The_Bold_Font.ttf');
+}
+
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnerbold.ttf');
+}
+
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnernormal.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-BOLD.OTF');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal;
+    font-style: italic;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-SEMIBOLDIT.OTF');
+}
+
+:root {
+    --green: #54D6C0;
+    --greenHover: #287d6f;
+    --purple: #5B65B3;
+    --purpleHover: #39417c;
+    --red: #C13D3D;
+    --yellow: #F4C737;
+    --white: #F4F4F4;
+    --black: #1B1B1B;
+
+    /* Font */
+    --tituloFont: 'The-Bold-Font', sans-serif;
+    --subtituloFont: 'Time-Burner', sans-serif;
+    --textFont: 'Myriad-Pro', sans-serif;
+}
+
+.main_SN{
+    margin-top: 12rem;
+}
+
+@media (max-width: 650px) {
+    .main_SN{
+        margin-top: 23rem;
+    }
+}
+
+.sec_significado{
+    height: 30.6rem;
+    background-image: url('../Recursos/Imagenes/SN_image1.png');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    display: flex;
+    align-items: center;
+}
+
+.significado__content{
+    max-width: 54rem;
+    padding: 0 1rem;
+    margin-left: 9.2rem;
+}
+
+.significado__content--titulo{
+    font-family: var(--tituloFont);
+    margin: 0;
+    font-size: 3.2rem;
+    width: fit-content;
+    border-bottom: 4px solid var(--black);
+}
+
+.significado__content--text{
+    font-family: var(--textFont);
+    font-size: 2rem;
+    color: var(--black);
+    text-align: justify;
+}
+
+.significado__content--text span{
+    font-weight: bold;
+}
