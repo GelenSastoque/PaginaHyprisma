@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'The-Bold-Font';
+    src: url('/Recursos/Fuentes/The Bold Font/The_Bold_Font.ttf');
+}
+
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnerbold.ttf');
+}
+
+@font-face {
+    font-family: 'Time-Burner';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Time Burner/timeburnernormal.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: bold;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-BOLD.OTF');
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    font-weight: normal;
+    font-style: italic;
+    src: url('/Recursos/Fuentes/Myriad Pro/MYRIADPRO-SEMIBOLDIT.OTF');
+}
+
+:root {
+    --green: #54D6C0;
+    --greenHover: #287d6f;
+    --purple: #5B65B3;
+    --purpleHover: #39417c;
+    --red: #C13D3D;
+    --yellow: #F4C737;
+    --white: #F4F4F4;
+    --black: #1B1B1B;
+
+    /* Font */
+    --tituloFont: 'The-Bold-Font', sans-serif;
+    --subtituloFont: 'Time-Burner', sans-serif;
+    --textFont: 'Myriad-Pro', sans-serif;
+}
+
+.main_SN {
+    margin-top: 12rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+@media (max-width: 650px) {
+    .main_SN {
+        margin-top: 23rem;
+    }
+}
+
+.button_yellow_ser {
+    font-family: var(--subtituloFont);
+    font-size: 1.8rem;
+    margin-top: 2rem; /* Ajusta según sea necesario */
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 2.9rem;
+    background-color: var(--yellow);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-right: 7rem;
+}
+.contButtonYellowS{
+    margin-top: 6rem;
+}
+.services-info {
+    margin-top: 6rem; /* Ajusta según sea necesario */
+    margin-left: 8rem;
+    margin-bottom: 8rem;
+}
+
+.ParrafoS {
+    font-family: var(--textFont);
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-right: 40rem;
+}
+
+.TituloNuestrosS {
+    font-family: var(--tituloFont);
+    margin: 0;
+    font-size: 3.2rem;
+    color: var(--white);
+    width: fit-content;
+    border-bottom: 0.4rem solid var(--yellow);
+}
+
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.column {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.circle {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    margin-right: 3rem;
+    margin-top: 0.2rem;
+    margin-left: 7rem;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 700%;
+    background-color: var(--yellow); 
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-container-Primer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title-Primer {
+    font-family: var(--subtituloFont);
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2rem; 
+    color: var(--white);
+    margin-bottom: 0.5rem; 
+    margin-top: 2rem;
+}
+
+.column-paragraph-Primer {
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: var(--white);
+    text-align: justify;
+    margin-left: 1rem;
+    position: relative;
+}
+
+
+
+.column-list-Primer {
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+    list-style-type: disc; /* Utiliza viñetas para la lista */
+    position: relative;
+}
+
+.column-list-Primer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--white); 
+    position: absolute;
+    top: 50%;   
+    margin-top: 5rem;
+}
+
+/* Nuevo círculo */
+.extra-circle {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    margin-right: 3rem;
+    margin-top: 15rem; 
+    margin-left: 7rem;
+    position: relative;
+}
+.extra-circle-dos {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    margin-right: 3rem;
+    margin-top: 31rem; 
+    margin-left: 7rem;
+    position: relative;
+}
+
+.column-list-item {
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-top: none;
+}
+.textoPrecio{
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: var(--white);
+    text-align: justify;
+    margin-left: 1rem;
+    position: relative;
+    margin-top: 2.4rem;
+}
+.textoColDer{
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-top: 2rem;
+    margin-left: 16rem;
+    margin-right: 16rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.containertextoDer{
+    margin-bottom: 8rem;
+}
+.column-list-item-precio{
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-top: none;
+    list-style-type: none;
+    margin-left: 20rem;
+    margin-right: 16rem;
+}
+.ContainerTextFinal{
+    min-height: 30.6rem;
+    background-image: url('../Recursos/Imagenes/ServiciosFInal.png');
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    display: flex;
+    align-items: center;
+}
+.TextFinal{
+    font-family: var(--subtituloFont);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin-left: 16rem;
+    margin-right: 16rem;
+}
+.circle i,
+.extra-circle i,
+.extra-circle-dos i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem; /* Ajusta el tamaño según sea necesario */
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+}
