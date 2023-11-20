@@ -43,6 +43,7 @@
     --yellow: #F4C737;
     --white: #F4F4F4;
     --black: #1B1B1B;
+    --orange: #F60;
 
     /* Font */
     --tituloFont: 'The-Bold-Font', sans-serif;
@@ -52,11 +53,14 @@
 
 .main_TCN{
     margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (max-width: 650px) {
     .main_TCN{
-        margin-top: 23rem;
+        margin-top: 30rem;
     }
 }
 
@@ -64,10 +68,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem;
+    max-width: 120.7rem;
 }
 
 .TH__texto{
-
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+    margin: 3rem 0;
 }
 
 .TH__gridContainer{
@@ -76,51 +86,162 @@
     grid-template-areas: 
                         "contrato beneficios" 
                         "CC beneficios";
-
+    gap: 3rem;
 }
 
+@media (max-width: 916px){
+    .TH__gridContainer{
+        grid-template-columns: 1fr;
+        grid-template-areas: unset;
+    }
+}
+
+
 .TH--secContratos{
-    grid-area: "contrato";
+    grid-area: contrato;
+    border-radius: 30px;
+    background: var(--yellow);
+    padding: 5rem 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    justify-content: center;
+}
+
+@media (max-width: 916px){
+    .TH--secContratos{
+        grid-area: unset;
+    }
 }
 
 .secContratos--titulo{
-
+    color: var(--black);
+    text-align: center;
+    font-family: var(--subtituloFont);
+    font-size: 2.4rem;
+    margin: 0;
 }
 
 .secContratos--texto{
+    color: var(--black);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+    margin: 0;
+}
 
+.secContratos--texto span{
+    font-weight: bold;
 }
 
 .TH--secBeneficios{
-    grid-area: "beneficios";
+    grid-area: beneficios;
+    border-radius: 3rem;
+    border: 4px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    padding: 3.9rem 4.3rem;
+    align-items: center;
+}
+
+@media (max-width: 916px){
+    .TH--secBeneficios{
+        grid-area: unset;
+    }
 }
 
 .secBeneficios__header{
-
+    border-radius: 50px;
+    background-color: var(--red);
+    width: fit-content;
+    padding: 1rem 3rem;
 }
 
 .secBeneficios--titulo{
-
+    color: var(--white);
+    text-align: center;
+    font-family: var(--subtituloFont);
+    font-size: 2.4rem;
+    margin: 0;
 }
 
 .secBeneficios--texto{
 
 }
 
-.TH_secCajaComp{
-    grid-area: "CC";
+.secBeneficios--texto p{
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+    margin-bottom: 0;
 }
 
-.secCajaComp--img{
+.secBeneficios--texto ul{
+    color: var(--white);
+}
 
+.secBeneficios--texto ul li p{
+    color: var(--white);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.secBeneficios--texto ul li p span{
+    font-weight: bold;
+}
+
+.TH--secCajaComp{
+    grid-area: CC;
+    border-radius: 30px;
+    border: 4px solid var(--orange);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6.1rem;
+    padding-top: 4.8rem;
+    padding-bottom: 2.5rem;
+    justify-content: center; 
+}
+
+@media (max-width: 916px){
+    .TH--secCajaComp{
+        grid-area: unset;
+    }
+}
+
+
+.secCajaComp--img{
+    width: 100%;
 }
 
 .secCajaComp--texto{
+    color: var(--black);
+    text-align: justify;
+    font-family: var(--textFont);
+    font-size: 2rem;
+}
 
+.secCajaComp--texto span{
+    font-weight: bold;
+}
+
+.link--container{
+    position: relative;
+    width: 100%;
+    align-items: end;
+    justify-content: end;
 }
 
 .secCajaComp--link{
-
+    color: var(--orange);
+    text-align: center;
+    font-family: var(--textFont);
+    font-size: 1.8rem;
+    text-decoration-line: underline;
 }
 
 
