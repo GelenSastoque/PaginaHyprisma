@@ -87,6 +87,18 @@
     max-width: 111.8rem;
 }
 
+@media (max-width: 970px) {
+    .vacantes__gridContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .vacantes__gridContainer{
+        grid-template-columns: 1fr;
+    }
+}
+
 .v_tarjeta{
     border-radius: 25px;
     border: 5px solid var(--green);
