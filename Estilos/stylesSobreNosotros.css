@@ -359,3 +359,20 @@
         padding: 1rem 2rem;
     }
 }
+
+.Tarjeta{
+    display: flex;
+    position: relative;
+}
+.ImgTarjeta{
+    width:50%;
+    
+}
+.containerTarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 2rem;
+}
