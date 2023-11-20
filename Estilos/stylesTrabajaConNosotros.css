@@ -60,6 +60,72 @@
     }
 }
 
+.TH{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TH__texto{
+
+}
+
+.TH__gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+                        "contrato beneficios" 
+                        "CC beneficios";
+
+}
+
+.TH--secContratos{
+    grid-area: "contrato";
+}
+
+.secContratos--titulo{
+
+}
+
+.secContratos--texto{
+
+}
+
+.TH--secBeneficios{
+    grid-area: "beneficios";
+}
+
+.secBeneficios__header{
+
+}
+
+.secBeneficios--titulo{
+
+}
+
+.secBeneficios--texto{
+
+}
+
+.TH_secCajaComp{
+    grid-area: "CC";
+}
+
+.secCajaComp--img{
+
+}
+
+.secCajaComp--texto{
+
+}
+
+.secCajaComp--link{
+
+}
+
+
+
+
 .vacantes{
     z-index: 1;
     padding: 0 1rem;
